@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3N-wY-LVe">
+                                <rect key="frame" x="180" y="384" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4Cg-Lb-WeQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="4PZ-ly-iDA"/>
+                                </constraints>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8tE-3u-8CC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="音量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTc-JT-fQe">
+                                <rect key="frame" x="178" y="69" width="34" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="速率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHb-ba-Tej">
+                                <rect key="frame" x="178" y="170" width="34" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Vcp-bN-feF"/>
+                                    <constraint firstAttribute="height" constant="21" id="h6U-x4-rFI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="niU-u1-Ejg">
+                                <rect key="frame" x="136" y="205" width="118" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tSv-Ko-7jw"/>
+                                    <constraint firstAttribute="width" constant="114" id="uis-6Q-VgE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="rateChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="5tu-qd-ef1"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="立体声" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSw-im-XY5">
+                                <rect key="frame" x="170" y="263" width="51" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7FQ-oG-CfO"/>
+                                    <constraint firstAttribute="width" constant="51" id="jRU-xn-8Nj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ar-hg-M3x">
+                                <rect key="frame" x="136" y="300" width="118" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="eX7-g8-z7h"/>
+                                    <constraint firstAttribute="height" constant="30" id="oSj-sb-LuU"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="panChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="cQw-da-nJ2"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-w7-M7R">
+                                <rect key="frame" x="180" y="441" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CPp-Mc-IAU"/>
+                                    <constraint firstAttribute="width" constant="30" id="nff-gP-71H"/>
+                                </constraints>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0A-UK-9tc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QS7-ex-S4v">
+                                <rect key="frame" x="180" y="496" width="30" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="02J-UL-2v8"/>
+                                    <constraint firstAttribute="width" constant="30" id="vu0-Tm-Kld"/>
+                                </constraints>
+                                <state key="normal" title="重置"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T96-Ql-xD3"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ejU-8A-j1T">
+                                <rect key="frame" x="138" y="102" width="118" height="31"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="7pd-QM-Bvj"/>
+                                    <constraint firstAttribute="height" constant="30" id="uZE-rx-xwZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="volumeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="vTW-w2-em5"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4XJ-w7-M7R" firstAttribute="top" secondItem="N3N-wY-LVe" secondAttribute="bottom" constant="27" id="22A-Cc-kda"/>
+                            <constraint firstItem="QS7-ex-S4v" firstAttribute="top" secondItem="4XJ-w7-M7R" secondAttribute="bottom" constant="25" id="Fkd-Up-imk"/>
+                            <constraint firstItem="0Ar-hg-M3x" firstAttribute="top" secondItem="TSw-im-XY5" secondAttribute="bottom" constant="15" id="Iu1-wr-6Ja"/>
+                            <constraint firstItem="TSw-im-XY5" firstAttribute="top" secondItem="niU-u1-Ejg" secondAttribute="bottom" constant="29" id="LjO-lG-6sg"/>
+                            <constraint firstItem="N3N-wY-LVe" firstAttribute="top" secondItem="0Ar-hg-M3x" secondAttribute="bottom" constant="55" id="kue-6f-Lgw"/>
+                            <constraint firstItem="niU-u1-Ejg" firstAttribute="top" secondItem="BHb-ba-Tej" secondAttribute="bottom" constant="13" id="oIZ-UZ-Xhe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="panSidler" destination="0Ar-hg-M3x" id="Hzt-i8-0Rz"/>
+                        <outlet property="rateSilder" destination="niU-u1-Ejg" id="kip-ar-QSa"/>
+                        <outlet property="volumeSilder" destination="ejU-8A-j1T" id="phf-l4-ymB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
