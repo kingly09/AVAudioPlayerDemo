@@ -18,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //配置音频会话
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    NSError *error;
+    //添加会话分类功能（音频的行为）有好多种默认行为
+    if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) {
+        NSLog(@"%@",error);
+    }
+    if (![session setActive:YES error:&error]) {
+        NSLog(@"%@",error);
+    }
+
     return YES;
 }
 
